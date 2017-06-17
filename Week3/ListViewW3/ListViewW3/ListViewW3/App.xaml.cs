@@ -13,7 +13,9 @@ namespace ListViewW3
         {
             InitializeComponent();
 
-            MainPage = new ListViewW3.MainPage();
+            MainPage = new View.ListPage1();
+
+            //MainPage = new ListViewW3.MainPage();
         }
 
         protected override void OnStart()

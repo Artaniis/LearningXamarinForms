@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewW3.View.ListPage1">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="MiLista" 
+                      ItemsSource="{Binding Elementos}"
+                      ItemSelected="listView_ItemSelected"
+                      SelectedItem="{Binding ItemSelected}"
+                      RowHeight="54">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image HeightRequest="48"
+                                       WidthRequest="48"
+                                       Source="{Binding Image}"/>
+                                
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Element}"/>
+                                    <Label Text="{Binding Person}"/>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
