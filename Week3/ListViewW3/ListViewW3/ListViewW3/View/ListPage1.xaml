@@ -9,17 +9,18 @@
                       ItemsSource="{Binding Elementos}"
                       ItemSelected="listView_ItemSelected"
                       SelectedItem="{Binding ItemSelected}"
-                      RowHeight="54">
+                      RowHeight="100">
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                
                                 <Image HeightRequest="48"
                                        WidthRequest="48"
                                        Source="{Binding Image}"/>
                                 
-                                <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center">
                                     <Label Text="{Binding Element}"/>
                                     <Label Text="{Binding Person}"/>
                                 </StackLayout>
