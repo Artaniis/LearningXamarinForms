@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterLoginW2.View.RegisterFormView"
+             Title="Register"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+                
+                <Entry x:Name="FirstName" 
+                       Placeholder="First Name" 
+                       HorizontalOptions="FillAndExpand"/>
+
+                <Entry x:Name="LastName" 
+                       Placeholder="Last Name" 
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <Entry x:Name="Email" 
+                   Placeholder="Email" 
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="Password" 
+                   Placeholder="Password"
+                   IsPassword="True"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="ConfirmPassword" 
+                   Placeholder="Confirm Password"
+                   IsPassword="True"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Label Text="Tell Us About You" 
+                   FontAttributes="Italic"
+                   Margin="0, 10, 0, 0"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Editor x:Name="Bio"
+                    HeightRequest="100"
+                    BackgroundColor="LightGray"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Switch VerticalOptions="Center"/>
+                
+                <Label Text="Accept terms and conditions"
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+
+                <Button x:Name="CreateAccount"
+                        Text="CREATE ACCOUNT"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="Black"
+                        TextColor="White"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

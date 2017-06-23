@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RegisterLoginW2.View;
 
 using Xamarin.Forms;
 
@@ -13,7 +14,8 @@ namespace RegisterLoginW2
         {
             InitializeComponent();
 
-            MainPage = new RegisterLoginW2.MainPage();
+            //MainPage = new RegisterLoginW2.MainPage();
+            MainPage = new RegisterFormView();
         }
 
         protected override void OnStart()
