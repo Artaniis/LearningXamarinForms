@@ -15,7 +15,7 @@ namespace RegisterLoginW2
             InitializeComponent();
 
             //MainPage = new RegisterLoginW2.MainPage();
-            MainPage = new RegisterFormView();
+            MainPage = new NavigationPage(new RegisterFormView());
         }
 
         protected override void OnStart()

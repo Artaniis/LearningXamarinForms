@@ -47,18 +47,14 @@
                 <Label Text="Accept terms and conditions"
                        VerticalOptions="CenterAndExpand"/>
             </StackLayout>
-
-            <StackLayout HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand">
-
-                <Button x:Name="CreateAccount"
+            
+            <Button x:Name="CreateAccount"
                         Text="CREATE ACCOUNT"
                         VerticalOptions="EndAndExpand"
-                        HorizontalOptions="FillAndExpand"
+                        
                         BackgroundColor="Black"
                         TextColor="White"/>
-            </StackLayout>
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
