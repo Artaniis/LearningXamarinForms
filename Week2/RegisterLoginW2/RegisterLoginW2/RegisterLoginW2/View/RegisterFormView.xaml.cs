@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleBindingForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace RegisterLoginW2.View
         public RegisterFormView()
         {
             InitializeComponent();
+            this.BindingContext = new RegisterViewModel();
         }
     }
 }

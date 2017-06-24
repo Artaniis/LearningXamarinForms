@@ -11,26 +11,31 @@
                 
                 <Entry x:Name="FirstName" 
                        Placeholder="First Name" 
-                       HorizontalOptions="FillAndExpand"/>
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding User.FirstName}"/>
 
                 <Entry x:Name="LastName" 
                        Placeholder="Last Name" 
-                       HorizontalOptions="FillAndExpand"/>
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding User.LastName}"/>
             </StackLayout>
 
             <Entry x:Name="Email" 
                    Placeholder="Email" 
-                   HorizontalOptions="FillAndExpand"/>
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding User.Email}"/>
 
             <Entry x:Name="Password" 
                    Placeholder="Password"
                    IsPassword="True"
-                   HorizontalOptions="FillAndExpand"/>
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding User.Password}"/>
 
             <Entry x:Name="ConfirmPassword" 
                    Placeholder="Confirm Password"
                    IsPassword="True"
-                   HorizontalOptions="FillAndExpand"/>
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding User.ConfirmPassword}"/>
 
             <Label Text="Tell Us About You" 
                    FontAttributes="Italic"
@@ -39,21 +44,23 @@
 
             <Editor x:Name="Bio"
                     HeightRequest="100"
-                    BackgroundColor="LightGray"/>
+                    BackgroundColor="LightGray"
+                    Text="{Binding User.AboutMe}"/>
 
             <StackLayout Orientation="Horizontal">
-                <Switch VerticalOptions="Center"/>
+                <Switch VerticalOptions="Center"
+                        IsToggled="{Binding HasNotifications}"/>
                 
                 <Label Text="Accept terms and conditions"
                        VerticalOptions="CenterAndExpand"/>
             </StackLayout>
             
             <Button x:Name="CreateAccount"
-                        Text="CREATE ACCOUNT"
-                        VerticalOptions="EndAndExpand"
-                        
-                        BackgroundColor="Black"
-                        TextColor="White"/>
+                    Text="CREATE ACCOUNT"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    Command="{Binding OnCommand}"/>
             
         </StackLayout>
     </ContentPage.Content>
