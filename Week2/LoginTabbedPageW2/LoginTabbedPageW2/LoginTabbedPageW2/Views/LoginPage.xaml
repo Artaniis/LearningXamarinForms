@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTabbedPageW2.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{DynamicResource primary}">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <Image Source="logo" 
+                   HeightRequest="100" 
+                   WidthRequest="100"/>
+
+            <Label Text="User" TextColor="White"/>
+            
+            <Entry Text="{Binding User.Email}" 
+                   Style="{DynamicResource entryStyle}"/>
+            
+            <Label  Text="Password" TextColor="White"/>
+            
+            <Entry Text="{Binding User.Password}" 
+                   Style="{DynamicResource entryStyle}"
+                   IsPassword="True"/>
+
+            <Button Command="{Binding OnLoginCommand}" 
+                    Style="{DynamicResource mainButtonStyle}" 
+                    Text="Sign In"/>
+
+            <Label FontSize="10" 
+                   TextColor="White"  
+                   VerticalOptions="EndAndExpand" 
+                   HorizontalOptions="Center"
+                   Text="Don't you have an account? SignUp">
+                
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                </Label.GestureRecognizers>
+                
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

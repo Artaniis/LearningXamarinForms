@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginTabbedPageW2.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace LoginTabbedPageW2
         {
             InitializeComponent();
 
-            MainPage = new LoginTabbedPageW2.MainPage();
+            //MainPage = new LoginTabbedPageW2.MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTabbedPageW2.Views.HomePage"
+             NavigationPage.HasBackButton="False"
+             Title="Home!">
+
+    <ContentPage Title="Home" Icon="ic_home">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Order="Primary"  Text="Help" Priority="0" />
+            <ToolbarItem Order="Secondary"  Text="About Us" Priority="0" />
+            <ToolbarItem Order="Secondary"  Text="Contact Us" Priority="0" />
+        </ContentPage.ToolbarItems>
+
+        <StackLayout Padding="16" >
+            <Label Text="Date:" TextColor="Black"/>
+            
+            <Label Text="{Binding Time}" TextColor="Black"/>
+
+            <Label Margin="0,10,0,0" 
+                   Text="More Info: http://www.mytime.net.au/" 
+                   TextColor="Black" 
+                   HorizontalOptions="EndAndExpand">
+                
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnMoreInfoCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Profile" Icon="ic_person" Padding="16">
+        <StackLayout>
+            <Label Text="First Name" 
+                   TextColor="{DynamicResource primary}"/>
+            
+            <Entry Style="{DynamicResource entryStyle}" 
+                   Text="{Binding User.FirstName}" />
+            
+            <Label Text="Last Name" 
+                   TextColor="{DynamicResource primary}"/>
+            
+            <Entry Style="{DynamicResource entryStyle}"
+                   Text="{Binding User.LastName}" />
+
+            <Label Text="Email" 
+                   TextColor="{DynamicResource primary}"/>
+            
+            <Entry Style="{DynamicResource entryStyle}" 
+                   Text="{Binding User.Email}" 
+                   Keyboard="Email" />
+
+            <Label Text="Password" 
+                   TextColor="{DynamicResource primary}"/>
+            
+            <Entry Style="{DynamicResource entryStyle}" 
+                   Text="{Binding User.Password}" 
+                   IsPassword="true"/>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

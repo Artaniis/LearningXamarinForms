@@ -6,5 +6,25 @@
 
 		<!-- Application resource dictionary -->
 
+        <ResourceDictionary>
+            <Color x:Key="primary">#1d2029</Color>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="TextColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" Android="White" iOS="Black"></OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style x:Key="mainButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BorderColor" Value="Yellow"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="Yellow"/>
+            </Style>
+        </ResourceDictionary>
+
 	</Application.Resources>
 </Application>
