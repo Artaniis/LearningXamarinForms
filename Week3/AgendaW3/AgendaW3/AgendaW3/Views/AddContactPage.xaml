@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaW3.Views.AddContactPage"
+             Title="New Contact">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <Entry x:Name="NewName" 
+                   Placeholder="Name"
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding MyNewContact.Name}"/>
+            
+            <Entry x:Name="NewNumber" 
+                   Placeholder="Number"
+                   Keyboard="Telephone"
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding MyNewContact.Number}"/>
+
+            <Button x:Name="ADD"
+                    Text="ADD"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    Command="{Binding OnAddNewCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

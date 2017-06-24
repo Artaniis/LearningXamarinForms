@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaW3.Views.ContactsPage"
+             Title="My Contacts">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" 
+                     Text="ADD" 
+                     Priority="0"
+                     Command="{Binding OnAddCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <ListView x:Name="MyContactList"
+                      RowHeight="80"
+                      ItemsSource="{Binding MyContacts}"
+                      ItemSelected="MyContactList_ItemSelected"
+                      SelectedItem="{Binding ItemSelected}"
+                      IsPullToRefreshEnabled="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <ViewCell.ContextActions>
+                                <MenuItem Command="{Binding OnDeleteCommand}"
+                                          CommandParameter="{Binding .}"
+                                          Text="Delete" 
+                                          IsDestructive="True" />
+                            </ViewCell.ContextActions>
+
+                            <StackLayout Orientation="Vertical" 
+                                         VerticalOptions="Center">
+
+                                <Label x:Name="Name" Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label x:Name="Number" Text="{Binding Number}"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
